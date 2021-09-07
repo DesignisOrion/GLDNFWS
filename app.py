@@ -3,16 +3,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def showController():
     return render_template('index.html')
-
-@app.route('/blog')
-def blog():
-    return 'Blog Page'
-
-@app.route('/greeting/<name>')
-def greeting(name):
-    return render_template('page.html', name='Orion')
 
 
 
